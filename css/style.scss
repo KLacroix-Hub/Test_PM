@@ -1,0 +1,135 @@
+/*INTEGRATION DES FONTS*/
+
+@font-face {
+    font-family: "Reservation";
+    src:   url("../fonts/Reservation/ReservationWide-Bold.woff2") format("woff2"),
+           url("../fonts/Reservation/ReservationWide-Bold.woff") format("woff"),
+           url("../fonts/Reservation/ReservationWide-Bold.ttf") format("ttf"),
+           url("../fonts/Reservation/ReservationWide-Bold.eot") format("eot");
+}
+
+@font-face {
+    font-family: "Rocgrotesk";
+    src:   url("../fonts/Rocgrotesk/rocgrotesk-regular-webfont.woff2") format("woff2"),
+           url("../fonts/Rocgrotesk/rocgrotesk-regular-webfont.woff") format("woff"),
+           url("../fonts/Rocgrotesk/rocgrotesk-regular-webfont.ttf") format("ttf"),
+           url("../fonts/Rocgrotesk/rocgrotesk-regular-webfont.eot") format("eot");
+}
+
+/*INTEGRATION DES FONTS*/
+
+/*STYLES GENERAUX */
+
+body{
+    @extend %marginNone;
+}
+
+a{
+    text-decoration: none;
+}
+
+//STYLE H2 POUR LA TYPO RESERVATION
+%h2Reservation{
+    font-family: Reservation, sans-serif;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+//STYLE H2 POUR LA TYPO ROC GROTESK
+%h2RocGrotesk{
+    font-family: Rocgrotesk, sans-serif;
+    font-size: 15px !important;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+//CENTRER LES ELEMENTS (FLEX)
+%elementsCentrer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+//MARGE DROITE ET GAUCHE DE 50px
+%marginProjet{
+    margin-right: 50px;
+    margin-left: 50px;
+}
+
+// MARGE DE ZERO
+%marginNone{
+    margin: 0;
+}
+
+// PADDING DE ZERO
+%paddingNone{
+    padding: 0;
+}
+
+//LIST STYLE NONE
+%noListStyle{
+    list-style: none;
+}
+
+
+/* STYLES GENERAUX */
+
+/*COULEURS DU THEME */
+
+$themeBleu: #172A40;
+$txtBlanc: #F7F7F7;
+
+/*COULEURS DU THEME */
+
+
+/* PARAMETRAGE DE BASE */
+
+/* HEADER */
+    /* PROMO */
+
+    #promo{
+        @extend %elementsCentrer;
+        width: 100%;
+        height: 46px;
+        background-color: $themeBleu;
+        color: $txtBlanc;
+
+            > h2{
+                margin: 0;
+                @extend %h2RocGrotesk;
+            }
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @extend %marginProjet;
+        margin-top: 25px;            
+
+            > #menu{ 
+                display: flex;
+                @extend %marginNone;
+                @extend %noListStyle;
+                @extend %paddingNone;
+                
+                > a > li {
+                    @extend %h2Reservation;
+                    color: $themeBleu;
+                }
+                :nth-child(2){
+                    margin : 0 51px;
+                }
+            }
+
+            > #icons{  
+                display: flex;
+                @extend %marginNone;
+                @extend %noListStyle;
+                @extend %paddingNone;
+            }
+    }
+
+/* HEADER */
+    /* PROMO */

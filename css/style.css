@@ -1,0 +1,91 @@
+/*INTEGRATION DES FONTS*/
+@font-face {
+  font-family: "Reservation";
+  src: url("../fonts/Reservation/ReservationWide-Bold.woff2") format("woff2"), url("../fonts/Reservation/ReservationWide-Bold.woff") format("woff"), url("../fonts/Reservation/ReservationWide-Bold.ttf") format("ttf"), url("../fonts/Reservation/ReservationWide-Bold.eot") format("eot");
+}
+@font-face {
+  font-family: "Rocgrotesk";
+  src: url("../fonts/Rocgrotesk/rocgrotesk-regular-webfont.woff2") format("woff2"), url("../fonts/Rocgrotesk/rocgrotesk-regular-webfont.woff") format("woff"), url("../fonts/Rocgrotesk/rocgrotesk-regular-webfont.ttf") format("ttf"), url("../fonts/Rocgrotesk/rocgrotesk-regular-webfont.eot") format("eot");
+}
+/*INTEGRATION DES FONTS*/
+/*STYLES GENERAUX */
+a {
+  text-decoration: none;
+}
+
+nav > #menu > a > li {
+  font-family: Reservation, sans-serif;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
+#promo > h2 {
+  font-family: Rocgrotesk, sans-serif;
+  font-size: 15px !important;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+#promo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+nav {
+  margin-right: 50px;
+  margin-left: 50px;
+}
+
+nav > #icons, nav > #menu, body {
+  margin: 0;
+}
+
+nav > #icons, nav > #menu {
+  padding: 0;
+}
+
+nav > #icons, nav > #menu {
+  list-style: none;
+}
+
+/* STYLES GENERAUX */
+/*COULEURS DU THEME */
+/*COULEURS DU THEME */
+/* PARAMETRAGE DE BASE */
+/* HEADER */
+/* PROMO */
+#promo {
+  width: 100%;
+  height: 46px;
+  background-color: #172A40;
+  color: #F7F7F7;
+}
+#promo > h2 {
+  margin: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 25px;
+}
+nav > #menu {
+  display: flex;
+}
+nav > #menu > a > li {
+  color: #172A40;
+}
+nav > #menu :nth-child(2) {
+  margin: 0 51px;
+}
+nav > #icons {
+  display: flex;
+}
+
+/* HEADER */
+/* PROMO */
+
+/*# sourceMappingURL=style.css.map */
