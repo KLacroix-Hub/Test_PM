@@ -28,17 +28,37 @@ a{
     text-decoration: none;
 }
 
+li{
+    @extend %noListStyle;
+}
+
+ul{
+    padding: 0;
+    margin: 0;
+}
+
+//STYLE H1 POUR LA TYPO RESERVATION
+%h1Reservation{
+    font-family: Reservation, sans-serif;
+    font-size: 35px;
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: 3px;
+    line-height: 150%;
+    margin-bottom: 40px;
+}
+
 //STYLE H2 POUR LA TYPO RESERVATION
 %h2Reservation{
     font-family: Reservation, sans-serif;
-    font-size: 15px;
+    font-size: 16px;
     text-transform: uppercase;
 }
 
 //STYLE H2 POUR LA TYPO ROC GROTESK
 %h2RocGrotesk{
     font-family: Rocgrotesk, sans-serif;
-    font-size: 15px !important;
+    font-size: 16px !important;
     font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -55,6 +75,12 @@ a{
 %marginProjet{
     margin-right: 50px;
     margin-left: 50px;
+}
+
+//MARGE DROITE ET GAUCHE DE 100px
+%marginProjet100{
+    margin-right: 100px;
+    margin-left: 100px;
 }
 
 // MARGE DE ZERO
@@ -86,6 +112,12 @@ $txtBlanc: #F7F7F7;
 /* PARAMETRAGE DE BASE */
 
 /* HEADER */
+header{
+    background-image: url(../img/homeImg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
     /* PROMO */
 
     #promo{
@@ -101,12 +133,20 @@ $txtBlanc: #F7F7F7;
             }
     }
 
+    /* PROMO */
+
+    /* MENU */
+
     nav {
         display: flex;
         justify-content: space-between;
         align-items: center;
         @extend %marginProjet;
-        margin-top: 25px;            
+        margin-top: 25px;     
+        
+            > img {
+                margin-right: 70px;
+            }
 
             > #menu{ 
                 display: flex;
@@ -125,11 +165,141 @@ $txtBlanc: #F7F7F7;
 
             > #icons{  
                 display: flex;
+                align-items: center;
                 @extend %marginNone;
                 @extend %noListStyle;
                 @extend %paddingNone;
+                
+                > #Langues{
+                    margin-right: 42px;
+
+                    > select {
+                        border: none;
+                        background-color: transparent;
+                        @extend %h2RocGrotesk;
+                    
+                    }
+                } 
+
+                > a {
+                    margin-right: 17px;
+
+                    > li > #nbItems{
+                        @extend %h2RocGrotesk;
+                        letter-spacing: 0;
+                        position: relative;
+                        bottom: 3px;
+                        left: 7px;
+                    }
+                }
+
             }
     }
+     /* MENU */
 
+     /* HERO */
+
+    #hero{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        top: 27%;
+        
+        > h1{
+            @extend %h1Reservation;
+            text-align: center;
+        }
+        & button{
+            width: 172px;
+            height: 47px;
+            @extend %h2RocGrotesk;
+            letter-spacing: 0;
+            border: none;
+            border-radius: none;
+        }
+    }
+
+     /* HERO */
 /* HEADER */
-    /* PROMO */
+
+/* MAIN */
+
+    /* LA SELECTION */
+
+    main{
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        align-content: center;
+
+        & #laSelection{
+            & h1{
+                @extend %h1Reservation;
+                font-size: 25px;
+                color: black;
+                text-align: center;
+                margin-top: 40px;
+                @extend %marginProjet;
+            }
+
+            & ul{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-bottom: 124px;
+            @extend %marginProjet;
+            }  
+        }
+
+        & #Infos{
+            height: 77px;
+            background-color: #F7F7F7;
+            display: grid;
+            align-items: center;
+            
+            & ul{
+                @extend %h2Reservation;
+                @extend %marginProjet100;
+                letter-spacing: 3px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+        }
+    }
+
+    /* LA SELECTION */
+
+/* MAIN */
+
+/* FOOTER */
+
+    footer{
+        background: $themeBleu;
+        padding-top: 78px;
+
+        & section {
+            @extend %marginProjet100;
+            display: flex;
+            justify-content: space-between;
+
+            & div{
+
+                & .h2Footer{
+                @extend %h2Reservation;
+                color: white;
+                }
+
+                & form{
+                    display: flex;
+                    flex-direction: column;
+                }
+
+            }
+            
+        }
+    }
+
+/* FOOTER */

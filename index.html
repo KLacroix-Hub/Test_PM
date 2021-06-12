@@ -15,53 +15,51 @@
         </div>
         <nav>
 
-            <img src="./img/Logo.svg" alt="BRIN DE MER">
+            <a href="index.html"><img src="./img/Logo.svg" alt="BRIN DE MER"></a>
            
 
             <ul id="menu">
-                <a href="#"><li>E-SHOP</li></a>
-                <a href="#"><li>LA SOURCE</li></a>
-                <a href="#"><li>LA MARQUE</li></a>
+                <a href="#Eshop"><li>E-SHOP</li></a>
+                <a href="#LaSource"><li>LA SOURCE</li></a>
+                <a href="#LaMarque"><li>LA MARQUE</li></a>
             </ul>
                 
             <ul id="icons">
-                <li>
+                <li id="Langues">
                     <select name="langues" size="1">
                         <option value="fr">Fr</option>
                         <option value="En">En</option>
                     </select>
                 </li>
-                <a href=""><li><img src="./img/searchIcon.svg" alt=""></li></a>
-                <a href=""><li><img src="./img/helpIcon.svg" alt=""></li></a>
-                <a href=""><li><img src="./img/profilImg.svg" alt=""></li></a>
-                <a href=""><li><img src="./img/shoppingCardIcon.svg" alt=""><span>(0)</span></li></a>
+                <a href="#Search"><li><img src="./img/searchIcon.svg" alt=""></li></a>
+                <a href="#Help"><li><img src="./img/helpIcon.svg" alt=""></li></a>
+                <a href="#monCompte"><li><img src="./img/profilImg.svg" alt=""></li></a>
+                <a href="#monPanier"><li><img src="./img/shoppingCardIcon.svg" alt=""><span id="nbItems">(0)</span></li></a>
             </ul>
 
 
             </div>
 
         </nav>
+
+        <section id="hero">
+            <h1>lookbook<br>collection 2021</h1>
+            <a href="#laSelection"><button>découvrir</button></a>
+        </section>
     </header>
 
     <main>
-
-        <section>
-            <img src="./img/homeImg.png" alt="">
-            <h1>lookbook collection 2021</h1>
-            <button>découvrir</button>
-        </section>
-
-        <section>
+        <section id="laSelection">
             <h1>notre sélection</h1>
             <ul>
-                <li><img src="../../images/h4yyesyxg64uwqtroq4f.png" alt="produitUn"></li>
-                <li><img src="../../images/rhmisuocdxcx95l5dxw9.png" alt="produitDeux"></li>
-                <li><img src="../../images/tldnaaif7lkt2vyg5wir.png" alt="produitTrois"></li>
-                <li><img src="../../images/ttf8hdrm8rajn0nogdfw.png" alt="produitQuatre"></li>
+                <li><img src="../img/h4yyesyxg64uwqtroq4f.png" alt="produitUn"></li>
+                <li><img src="../img/rhmisuocdxcx95l5dxw9.png" alt="produitDeux"></li>
+                <li><img src="../img/tldnaaif7lkt2vyg5wir.png" alt="produitTrois"></li>
+                <li><img src="../img/ttf8hdrm8rajn0nogdfw.png" alt="produitQuatre"></li>
             </ul>
         </section>
 
-        <section>
+        <section id="Infos">
             <ul>
                 <li>Paiement Sécurisé</li>
                 <li>Livraison Rapide</li>
@@ -77,7 +75,7 @@
         <section>
             
             <div>
-                <h2>Contact</h2>
+                <h2 class="h2Footer">Contact</h2>
                 <ul>
                     <li>+41 123123123</li>
                     <li>hello@hello.com</li>
@@ -90,7 +88,7 @@
             </div>
 
             <div>
-                <h2>Service Client</h2>
+                <h2 class="h2Footer">Service Client</h2>
                 <ul>
                     <li>Nous contacter</li>
                     <li>Commande et paiement</li>
@@ -101,7 +99,7 @@
             </div>
 
             <div>
-                <h2>Service Client</h2>
+                <h2 class="h2Footer">Service Client</h2>
                 <ul>
                     <li>Nous contacter</li>
                     <li>Commande et paiement</li>
@@ -112,18 +110,8 @@
             </div>
 
             <div>
-                <p>Blanc Bleu© 2010—2019 - Tous Droits Réservés</p>
-                <img src="./img/Logo.svg" alt="BRIN DE MER">
-            </div>
-
-
-        </section>
-
-        <section>
-
-            <div>
-                <h2>sign up to our mail list</h2>
-                <form action="">
+                <h2 class="h2Footer">sign up to our mail list</h2>
+                <form action=""  method="get">
                     <input type="email" placeholder="Adresse e-mail">
                     <input type="checkbox" id="checkbox">
                     <label for="checkbox">J’accepte la politique de confidentialité</label>
@@ -131,6 +119,13 @@
                 </form>
             </div>
 
+        </section>
+
+        <section>
+            <div>
+                <p>Blanc Bleu© 2010—2019 - Tous Droits Réservés</p>
+                <img src="./img/logoBlanc.svg" alt="BRIN DE MER">
+            </div>
         </section>
 
     </footer>
