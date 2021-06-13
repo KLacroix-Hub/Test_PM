@@ -1,0 +1,594 @@
+/*INTEGRATION DES FONTS*/
+
+@font-face {
+    font-family: "Reservation";
+    src:   url("../fonts/Reservation/ReservationWide-Bold.woff2") format("woff2"),
+           url("../fonts/Reservation/ReservationWide-Bold.woff") format("woff"),
+           url("../fonts/Reservation/ReservationWide-Bold.ttf") format("ttf"),
+           url("../fonts/Reservation/ReservationWide-Bold.eot") format("eot");
+}
+
+@font-face {
+    font-family: "Rocgrotesk";
+    src:   url("../fonts/Rocgrotesk/rocgrotesk-regular-webfont.woff2") format("woff2"),
+           url("../fonts/Rocgrotesk/rocgrotesk-regular-webfont.woff") format("woff"),
+           url("../fonts/Rocgrotesk/rocgrotesk-regular-webfont.ttf") format("ttf"),
+           url("../fonts/Rocgrotesk/rocgrotesk-regular-webfont.eot") format("eot");
+}
+
+/*INTEGRATION DES FONTS*/
+
+/*STYLES GENERAUX */
+
+body{
+    @extend %marginNone;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    @extend %noListStyle;
+}
+
+ul{
+    padding: 0;
+    margin: 0;
+}
+
+//STYLE H1 POUR LA TYPO RESERVATION
+%h1Reservation{
+    font-family: Reservation, sans-serif;
+    font-size: 35px;
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: 3px;
+    line-height: 150%;
+    margin-bottom: 40px;
+}
+
+//STYLE H2 POUR LA TYPO RESERVATION
+%h2Reservation{
+    font-family: Reservation, sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+//STYLE H2 POUR LA TYPO ROC GROTESK
+%h2RocGrotesk{
+    font-family: Rocgrotesk, sans-serif;
+    font-size: 16px !important;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+//CENTRER LES ELEMENTS (FLEX)
+%elementsCentrer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+//MARGE DROITE ET GAUCHE DE 50px
+%marginProjet{
+    margin-right: 50px;
+    margin-left: 50px;
+}
+
+//MARGE DROITE ET GAUCHE DE 100px
+%marginProjet100{
+    margin-right: 100px;
+    margin-left: 100px;
+}
+
+// MARGE DE ZERO
+%marginNone{
+    margin: 0;
+}
+
+// PADDING DE ZERO
+%paddingNone{
+    padding: 0;
+}
+
+//LIST STYLE NONE
+%noListStyle{
+    list-style: none;
+}
+
+
+/* STYLES GENERAUX */
+
+/*COULEURS DU THEME */
+
+$themeBleu: #172A40;
+$txtBlanc: #F7F7F7;
+
+/*COULEURS DU THEME */
+
+
+/* PARAMETRAGE DE BASE */
+
+/* HEADER */
+header{
+    background-image: url(../img/homeImg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    @media (max-width:500px){
+        background-position: -340px;
+    }
+}
+    /* PROMO */
+
+    #promo{
+        @extend %elementsCentrer;
+        width: 100%;
+        height: 46px;
+        background-color: $themeBleu;
+        color: $txtBlanc;
+
+            > h2{
+                margin: 0;
+                @extend %h2RocGrotesk;
+                @media (max-width:500px) {
+                    font-size: 12px !important;
+                }
+            }
+    }
+
+    /* PROMO */
+
+    /* MENU */
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @extend %marginProjet;
+        margin-top: 25px;  
+        
+        @media (max-width:500px){
+            margin-right: 25px;
+            margin-left: 25px;
+        }
+        
+            & a > #Logo {
+                @media (max-width:500px) {
+                    width: 80%;
+                }
+            }
+
+            > #menu{ 
+
+                @media (max-width:500px) {
+                    display: none;
+                }
+
+                display: flex;
+                @extend %marginNone;
+                @extend %noListStyle;
+                @extend %paddingNone;
+                
+                > a > li {
+                    @extend %h2Reservation;
+                    color: $themeBleu;
+                }
+                :nth-child(2){
+                    margin : 0 51px;
+                }
+            }
+
+            > #icons{  
+
+                & .noVisibleMobile{
+                    @media (max-width:500px) {
+                        display: none;
+                    }
+
+                & .VisibleMobile > li{
+                    display: block !important;
+                }    
+            
+
+                }
+                display: flex;
+                align-items: center;
+                @extend %marginNone;
+                @extend %noListStyle;
+                @extend %paddingNone;
+                
+                > #Langues{
+
+                   
+
+                    margin-right: 42px;
+
+                    > select {
+                        border: none;
+                        background-color: transparent;
+                        @extend %h2RocGrotesk;
+                    
+                    }
+                } 
+
+                > a {
+                    margin-right: 17px;
+
+                    > li > #nbItems{
+                        @extend %h2RocGrotesk;
+                        letter-spacing: 0;
+                        position: relative;
+                        bottom: 3px;
+                        left: 7px;
+                    }
+                }
+
+            }
+    }
+     /* MENU */
+
+     /* HERO */
+
+    #hero{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        top: 27%;
+
+        @media (max-width:500px){
+            margin-right: 20px;
+            margin-left: 20px;
+        }
+        
+        > h1{
+            @extend %h1Reservation;
+            text-align: center;
+        }
+        & button{
+            width: 172px;
+            height: 47px;
+            @extend %h2RocGrotesk;
+            letter-spacing: 0;
+            border: none;
+            border-radius: none;
+        }
+    }
+
+     /* HERO */
+/* HEADER */
+
+/* MAIN */
+
+    /* LA SELECTION */
+
+    main{
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        align-content: center;
+
+        & #laSelection{
+            @extend %marginProjet;
+            & h1{
+                @extend %h1Reservation;
+                font-size: 25px;
+                color: black;
+                text-align: center;
+                margin-top: 40px;
+            }
+            
+            & .wrapper{
+                width: 100%;
+                display: flex;
+                justify-content: center;
+
+                & .carousel{
+                    max-width: 1600px;
+
+                    & .card{
+                       margin: 20px 0;
+
+                            &:hover{
+                               
+                                cursor: pointer;
+                            }  
+                        
+ 
+                    }
+                    
+                    & .owl-dots{
+                        text-align: center;
+                        margin-top: 40px;
+                        margin-bottom: 40px;
+                        cursor: pointer;
+
+                        & .owl-dot{
+                            width: 10px;
+                            height: 10px;
+                            margin: 0 15px;
+                            border: 1px solid #DBE5E4;
+                            border-radius: 50%;
+                            background: #DBE5E4;
+
+                            @media (max-width:500px){
+                                margin: 0 5px;
+                                width: 7px;
+                                height: 7px;
+                            }
+
+                            &:hover{
+                               background: $themeBleu;
+                            }
+                            &.active{
+                                background: $themeBleu;
+                            }
+                        }
+                    }
+                   
+                }
+            }
+
+        }
+
+        & #Infos{
+            height: 77px;
+            background-color: #F7F7F7;
+            display: grid;
+            align-items: center;
+
+            @media(max-width:500px){
+                height: auto;
+            }
+            
+            & ul{
+                @extend %h2Reservation;
+                @extend %marginProjet100;
+                letter-spacing: 3px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                @media (max-width:500px){
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    column-gap: 25px;
+                    row-gap: 20px;
+                    font-size: 14px;
+                    margin :25px 25px;
+                }
+                & li{
+                    @media (max-width:500px){
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+
+    /* LA SELECTION */
+
+/* MAIN */
+
+/* FOOTER */
+
+    footer{
+        background: $themeBleu;
+
+        & section {
+            @extend %marginProjet100;
+            display: flex;
+            justify-content: space-between;
+
+            @media (max-width:500px){
+                margin-left: 25px;
+                margin-right: 25px;
+                display: grid;
+                grid-template-columns: 1fr;
+                justify-items: center;
+            }
+
+            & #iconReseaux{
+                padding: 0;
+            }
+
+            & div{
+                padding-top: 78px;
+                @media (max-width:500px){
+                    padding-top: 25px;
+                    text-align: center;
+                }
+
+                & div :nth-child(1){
+                    margin-right: 11.5px;
+                }
+                
+                & .ulFooter{
+                    @extend %h2RocGrotesk;
+                    color: white;
+                    text-transform: none;
+                    letter-spacing: 0;
+                    margin-bottom: 20px;
+
+                    & li{
+                        margin-bottom: 7px;
+                    }
+                }
+
+                & .h2Footer{
+                @extend %h2Reservation;
+                color: white;
+                }
+
+            }
+            
+        }
+
+       #signUp{
+        background-color: #F7F7F7;
+        padding-top: 29px;
+        padding-bottom: 43px;
+        padding-left: 78.5px;
+        padding-right: 78.5px;
+        margin-top: 49px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @media (max-width:500px){
+            padding-right: 0;
+            padding-left: 0;
+        }
+
+            & .h2Footer{
+                color: $themeBleu;
+                margin-bottom: 25px;
+
+                @media (max-width:500px){
+                    font-size:13px;
+                }
+                
+            }
+
+            & form{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-content: stretch;
+                align-items: center;
+                height: 90%;
+
+                & input[type="email"]{
+                    @extend %h2RocGrotesk;
+                    text-transform: none;
+                    letter-spacing: 0;
+                    border: solid 1px #1B2A3E;
+                    color: $themeBleu;
+                    padding-top: 12px;
+                    padding-bottom: 12px;
+                    text-align: center;
+                    width: 110%;
+                    margin-bottom: 14px;
+
+                    @media (max-width:500px){
+                        width: 85%;
+                    }
+                       
+                        &::placeholder{
+                            color: $themeBleu;
+                        }
+                }
+
+                .round {
+                    position: relative;
+                    display: flex;
+                    flex-direction: row;
+                    padding: 0;
+
+                        & input[type="checkbox"] {
+                            visibility: hidden;
+                        }
+
+                        & label {
+                            background-color: #fff;
+                            border: 1px solid #fff;
+                            border-radius: 50%;
+                            cursor: pointer;
+                            width: 15px;
+                            height: 15px;
+                            position: absolute;   
+
+                            @media (max-width:500px){
+                                left: 30px;
+                            }
+                        }
+
+                        & label:after {
+                            border: 1px solid rgb(255, 255, 255);
+                            border-top: none;
+                            border-right: none;
+                            content: "";
+                            height: 6px;
+                            left: 7px;
+                            opacity: 0;
+                            position: absolute;
+                            top: 8px;
+                            transform: rotate(-45deg);
+                            width: 12px;
+                        }
+
+                        & input[type="checkbox"]:checked + label {
+                            background-color: $themeBleu;
+                            border-color: $themeBleu;
+                        }
+
+                        & input[type="checkbox"]:checked + label:after {
+                            opacity: 0;
+                        } 
+
+                        & p{
+                            margin: 0;
+                            @extend %h2RocGrotesk;
+                            font-size: 13px;
+                            letter-spacing: 0;
+                            text-transform: none;
+
+                            @media (min-width:400px) and (max-width:500px){
+                                font-size: 21px !important;
+                            }
+                        }
+                }
+
+                & input[type="submit"]{
+                    background-color: $themeBleu;
+                    text-align: center;
+                    color: white;
+                    @extend %h2RocGrotesk;
+                    letter-spacing: 0;
+                    padding: 12.5px 18px;
+                    margin-top: 14px;
+                    border: 0;
+                }
+            }
+
+        }
+
+        & #secondPartie{
+            & div {
+                width: 100%;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                align-items: center;
+                @media (max-width:500px) {
+                    grid-template-columns: 1fr;
+                    
+                }
+
+                & p{
+                    color: #fff;
+                    @extend %h2RocGrotesk;
+                    font-size: 11px !important;
+                    text-transform: none;
+                    letter-spacing: 0;
+                     
+                    @media (max-width:500px){
+                        text-align: start;
+                        font-size: 11px !important;
+                        text-align: center;
+                    }
+                }
+
+                & img{
+                    place-self: center;
+                    @media (max-width:500px){
+                        margin-bottom: 15px;
+                    }
+                }
+            }
+        }
+    }
+
+/* FOOTER */

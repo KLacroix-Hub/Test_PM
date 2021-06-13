@@ -1,0 +1,482 @@
+/*INTEGRATION DES FONTS*/
+@font-face {
+  font-family: "Reservation";
+  src: url("../fonts/Reservation/ReservationWide-Bold.woff2") format("woff2"), url("../fonts/Reservation/ReservationWide-Bold.woff") format("woff"), url("../fonts/Reservation/ReservationWide-Bold.ttf") format("ttf"), url("../fonts/Reservation/ReservationWide-Bold.eot") format("eot");
+}
+@font-face {
+  font-family: "Rocgrotesk";
+  src: url("../fonts/Rocgrotesk/rocgrotesk-regular-webfont.woff2") format("woff2"), url("../fonts/Rocgrotesk/rocgrotesk-regular-webfont.woff") format("woff"), url("../fonts/Rocgrotesk/rocgrotesk-regular-webfont.ttf") format("ttf"), url("../fonts/Rocgrotesk/rocgrotesk-regular-webfont.eot") format("eot");
+}
+/*INTEGRATION DES FONTS*/
+/*STYLES GENERAUX */
+a {
+  text-decoration: none;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+main #laSelection h1, #hero > h1 {
+  font-family: Reservation, sans-serif;
+  font-size: 35px;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 3px;
+  line-height: 150%;
+  margin-bottom: 40px;
+}
+
+footer section div .h2Footer, main #Infos ul, nav > #menu > a > li {
+  font-family: Reservation, sans-serif;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+footer #secondPartie div p, footer #signUp form input[type=submit], footer #signUp form .round p, footer #signUp form input[type=email], footer section div .ulFooter, #hero button, nav > #icons > a > li > #nbItems, nav > #icons > #Langues > select, #promo > h2 {
+  font-family: Rocgrotesk, sans-serif;
+  font-size: 16px !important;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+#promo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main #laSelection, nav {
+  margin-right: 50px;
+  margin-left: 50px;
+}
+
+footer section, main #Infos ul {
+  margin-right: 100px;
+  margin-left: 100px;
+}
+
+nav > #icons, nav > #menu, body {
+  margin: 0;
+}
+
+nav > #icons, nav > #menu {
+  padding: 0;
+}
+
+nav > #icons, nav > #menu, li {
+  list-style: none;
+}
+
+/* STYLES GENERAUX */
+/*COULEURS DU THEME */
+/*COULEURS DU THEME */
+/* PARAMETRAGE DE BASE */
+/* HEADER */
+header {
+  background-image: url(../img/homeImg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+@media (max-width: 500px) {
+  header {
+    background-position: -340px;
+  }
+}
+
+/* PROMO */
+#promo {
+  width: 100%;
+  height: 46px;
+  background-color: #172A40;
+  color: #F7F7F7;
+}
+#promo > h2 {
+  margin: 0;
+}
+@media (max-width: 500px) {
+  #promo > h2 {
+    font-size: 12px !important;
+  }
+}
+
+/* PROMO */
+/* MENU */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 25px;
+}
+@media (max-width: 500px) {
+  nav {
+    margin-right: 25px;
+    margin-left: 25px;
+  }
+}
+@media (max-width: 500px) {
+  nav a > #Logo {
+    width: 80%;
+  }
+}
+nav > #menu {
+  display: flex;
+}
+@media (max-width: 500px) {
+  nav > #menu {
+    display: none;
+  }
+}
+nav > #menu > a > li {
+  color: #172A40;
+}
+nav > #menu :nth-child(2) {
+  margin: 0 51px;
+}
+nav > #icons {
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 500px) {
+  nav > #icons .noVisibleMobile {
+    display: none;
+  }
+}
+nav > #icons .noVisibleMobile .VisibleMobile > li {
+  display: block !important;
+}
+nav > #icons > #Langues {
+  margin-right: 42px;
+}
+nav > #icons > #Langues > select {
+  border: none;
+  background-color: transparent;
+}
+nav > #icons > a {
+  margin-right: 17px;
+}
+nav > #icons > a > li > #nbItems {
+  letter-spacing: 0;
+  position: relative;
+  bottom: 3px;
+  left: 7px;
+}
+
+/* MENU */
+/* HERO */
+#hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: 27%;
+}
+@media (max-width: 500px) {
+  #hero {
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+}
+#hero > h1 {
+  text-align: center;
+}
+#hero button {
+  width: 172px;
+  height: 47px;
+  letter-spacing: 0;
+  border: none;
+  border-radius: none;
+}
+
+/* HERO */
+/* HEADER */
+/* MAIN */
+/* LA SELECTION */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  align-content: center;
+}
+main #laSelection h1 {
+  font-size: 25px;
+  color: black;
+  text-align: center;
+  margin-top: 40px;
+}
+main #laSelection .wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+main #laSelection .wrapper .carousel {
+  max-width: 1600px;
+}
+main #laSelection .wrapper .carousel .card {
+  margin: 20px 0;
+}
+main #laSelection .wrapper .carousel .card:hover {
+  cursor: pointer;
+}
+main #laSelection .wrapper .carousel .owl-dots {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  cursor: pointer;
+}
+main #laSelection .wrapper .carousel .owl-dots .owl-dot {
+  width: 10px;
+  height: 10px;
+  margin: 0 15px;
+  border: 1px solid #DBE5E4;
+  border-radius: 50%;
+  background: #DBE5E4;
+}
+@media (max-width: 500px) {
+  main #laSelection .wrapper .carousel .owl-dots .owl-dot {
+    margin: 0 5px;
+    width: 7px;
+    height: 7px;
+  }
+}
+main #laSelection .wrapper .carousel .owl-dots .owl-dot:hover {
+  background: #172A40;
+}
+main #laSelection .wrapper .carousel .owl-dots .owl-dot.active {
+  background: #172A40;
+}
+main #Infos {
+  height: 77px;
+  background-color: #F7F7F7;
+  display: grid;
+  align-items: center;
+}
+@media (max-width: 500px) {
+  main #Infos {
+    height: auto;
+  }
+}
+main #Infos ul {
+  letter-spacing: 3px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+@media (max-width: 500px) {
+  main #Infos ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 25px;
+    row-gap: 20px;
+    font-size: 14px;
+    margin: 25px 25px;
+  }
+}
+@media (max-width: 500px) {
+  main #Infos ul li {
+    text-align: center;
+  }
+}
+
+/* LA SELECTION */
+/* MAIN */
+/* FOOTER */
+footer {
+  background: #172A40;
+}
+footer section {
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 500px) {
+  footer section {
+    margin-left: 25px;
+    margin-right: 25px;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+}
+footer section #iconReseaux {
+  padding: 0;
+}
+footer section div {
+  padding-top: 78px;
+}
+@media (max-width: 500px) {
+  footer section div {
+    padding-top: 25px;
+    text-align: center;
+  }
+}
+footer section div div :nth-child(1) {
+  margin-right: 11.5px;
+}
+footer section div .ulFooter {
+  color: white;
+  text-transform: none;
+  letter-spacing: 0;
+  margin-bottom: 20px;
+}
+footer section div .ulFooter li {
+  margin-bottom: 7px;
+}
+footer section div .h2Footer {
+  color: white;
+}
+footer #signUp {
+  background-color: #F7F7F7;
+  padding-top: 29px;
+  padding-bottom: 43px;
+  padding-left: 78.5px;
+  padding-right: 78.5px;
+  margin-top: 49px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (max-width: 500px) {
+  footer #signUp {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+footer #signUp .h2Footer {
+  color: #172A40;
+  margin-bottom: 25px;
+}
+@media (max-width: 500px) {
+  footer #signUp .h2Footer {
+    font-size: 13px;
+  }
+}
+footer #signUp form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: stretch;
+  align-items: center;
+  height: 90%;
+}
+footer #signUp form input[type=email] {
+  text-transform: none;
+  letter-spacing: 0;
+  border: solid 1px #1B2A3E;
+  color: #172A40;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  width: 110%;
+  margin-bottom: 14px;
+}
+@media (max-width: 500px) {
+  footer #signUp form input[type=email] {
+    width: 85%;
+  }
+}
+footer #signUp form input[type=email]::placeholder {
+  color: #172A40;
+}
+footer #signUp form .round {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+}
+footer #signUp form .round input[type=checkbox] {
+  visibility: hidden;
+}
+footer #signUp form .round label {
+  background-color: #fff;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+}
+@media (max-width: 500px) {
+  footer #signUp form .round label {
+    left: 30px;
+  }
+}
+footer #signUp form .round label:after {
+  border: 1px solid white;
+  border-top: none;
+  border-right: none;
+  content: "";
+  height: 6px;
+  left: 7px;
+  opacity: 0;
+  position: absolute;
+  top: 8px;
+  transform: rotate(-45deg);
+  width: 12px;
+}
+footer #signUp form .round input[type=checkbox]:checked + label {
+  background-color: #172A40;
+  border-color: #172A40;
+}
+footer #signUp form .round input[type=checkbox]:checked + label:after {
+  opacity: 0;
+}
+footer #signUp form .round p {
+  margin: 0;
+  font-size: 13px;
+  letter-spacing: 0;
+  text-transform: none;
+}
+@media (min-width: 400px) and (max-width: 500px) {
+  footer #signUp form .round p {
+    font-size: 21px !important;
+  }
+}
+footer #signUp form input[type=submit] {
+  background-color: #172A40;
+  text-align: center;
+  color: white;
+  letter-spacing: 0;
+  padding: 12.5px 18px;
+  margin-top: 14px;
+  border: 0;
+}
+footer #secondPartie div {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+}
+@media (max-width: 500px) {
+  footer #secondPartie div {
+    grid-template-columns: 1fr;
+  }
+}
+footer #secondPartie div p {
+  color: #fff;
+  font-size: 11px !important;
+  text-transform: none;
+  letter-spacing: 0;
+}
+@media (max-width: 500px) {
+  footer #secondPartie div p {
+    text-align: start;
+    font-size: 11px !important;
+    text-align: center;
+  }
+}
+footer #secondPartie div img {
+  place-self: center;
+}
+@media (max-width: 500px) {
+  footer #secondPartie div img {
+    margin-bottom: 15px;
+  }
+}
+
+/* FOOTER */
+
+/*# sourceMappingURL=style.css.map */
